@@ -19,8 +19,8 @@ class ContentViewViewModel: ObservableObject {
             switch response.result {
             case .success :
                 print(response.data!)
-//                let employees = try! JSONDecoder().decode(Employee.self, from: response.data!)
-//                self.employees = employees.data ?? [EmployeeData]()
+                let employees = try! JSONDecoder().decode(Employee.self, from: response.data!).data
+                self.employees = employees ?? [EmployeeData]()
             case let .failure(error):
                 print("Error:", error.responseCode ?? "no code")
                 print(error)
