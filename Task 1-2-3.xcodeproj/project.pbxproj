@@ -11,6 +11,12 @@
 		64356876293F12E400E98CDA /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64356875293F12E400E98CDA /* ContentView.swift */; };
 		64356878293F12E500E98CDA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64356877293F12E500E98CDA /* Assets.xcassets */; };
 		6435687B293F12E500E98CDA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6435687A293F12E500E98CDA /* Preview Assets.xcassets */; };
+		64356884293F13D000E98CDA /* Employee.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64356883293F13D000E98CDA /* Employee.swift */; };
+		64356887293F13EC00E98CDA /* AFHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64356886293F13EC00E98CDA /* AFHttp.swift */; };
+		6435688A293F142C00E98CDA /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 64356889293F142C00E98CDA /* Alamofire */; };
+		6435688D293F148800E98CDA /* ContentViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435688C293F148800E98CDA /* ContentViewViewModel.swift */; };
+		6435688F293F19EA00E98CDA /* Task1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6435688E293F19EA00E98CDA /* Task1.swift */; };
+		64356891293F1A3F00E98CDA /* Task2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64356890293F1A3F00E98CDA /* Task2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +25,12 @@
 		64356875293F12E400E98CDA /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		64356877293F12E500E98CDA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6435687A293F12E500E98CDA /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		64356881293F130700E98CDA /* Task-1-2-3-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Task-1-2-3-Info.plist"; sourceTree = SOURCE_ROOT; };
+		64356883293F13D000E98CDA /* Employee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Employee.swift; sourceTree = "<group>"; };
+		64356886293F13EC00E98CDA /* AFHttp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AFHttp.swift; sourceTree = "<group>"; };
+		6435688C293F148800E98CDA /* ContentViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewViewModel.swift; sourceTree = "<group>"; };
+		6435688E293F19EA00E98CDA /* Task1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task1.swift; sourceTree = "<group>"; };
+		64356890293F1A3F00E98CDA /* Task2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Task2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6435688A293F142C00E98CDA /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,6 +64,10 @@
 		64356872293F12E400E98CDA /* Task 1-2-3 */ = {
 			isa = PBXGroup;
 			children = (
+				6435688B293F147700E98CDA /* viewmodel */,
+				64356885293F13DC00E98CDA /* network */,
+				64356882293F13C700E98CDA /* model */,
+				64356881293F130700E98CDA /* Task-1-2-3-Info.plist */,
 				64356873293F12E400E98CDA /* Task_1_2_3App.swift */,
 				64356875293F12E400E98CDA /* ContentView.swift */,
 				64356877293F12E500E98CDA /* Assets.xcassets */,
@@ -65,6 +82,32 @@
 				6435687A293F12E500E98CDA /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		64356882293F13C700E98CDA /* model */ = {
+			isa = PBXGroup;
+			children = (
+				64356883293F13D000E98CDA /* Employee.swift */,
+				6435688E293F19EA00E98CDA /* Task1.swift */,
+				64356890293F1A3F00E98CDA /* Task2.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		64356885293F13DC00E98CDA /* network */ = {
+			isa = PBXGroup;
+			children = (
+				64356886293F13EC00E98CDA /* AFHttp.swift */,
+			);
+			path = network;
+			sourceTree = "<group>";
+		};
+		6435688B293F147700E98CDA /* viewmodel */ = {
+			isa = PBXGroup;
+			children = (
+				6435688C293F148800E98CDA /* ContentViewViewModel.swift */,
+			);
+			path = viewmodel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +126,9 @@
 			dependencies = (
 			);
 			name = "Task 1-2-3";
+			packageProductDependencies = (
+				64356889293F142C00E98CDA /* Alamofire */,
+			);
 			productName = "Task 1-2-3";
 			productReference = 64356870293F12E400E98CDA /* Task 1-2-3.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +157,9 @@
 				Base,
 			);
 			mainGroup = 64356867293F12E400E98CDA;
+			packageReferences = (
+				64356888293F142C00E98CDA /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 64356871293F12E400E98CDA /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,8 +186,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6435688F293F19EA00E98CDA /* Task1.swift in Sources */,
+				64356891293F1A3F00E98CDA /* Task2.swift in Sources */,
 				64356876293F12E400E98CDA /* ContentView.swift in Sources */,
+				64356884293F13D000E98CDA /* Employee.swift in Sources */,
+				64356887293F13EC00E98CDA /* AFHttp.swift in Sources */,
 				64356874293F12E400E98CDA /* Task_1_2_3App.swift in Sources */,
+				6435688D293F148800E98CDA /* ContentViewViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +324,7 @@
 				DEVELOPMENT_TEAM = 6K7DDF9TZ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Task-1-2-3-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +354,7 @@
 				DEVELOPMENT_TEAM = 6K7DDF9TZ3;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Task-1-2-3-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -339,6 +395,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		64356888293F142C00E98CDA /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		64356889293F142C00E98CDA /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 64356888293F142C00E98CDA /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 64356868293F12E400E98CDA /* Project object */;
 }

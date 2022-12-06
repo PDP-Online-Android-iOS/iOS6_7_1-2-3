@@ -8,14 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject var viewModel = ContentViewViewModel()
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        NavigationView {
+            ZStack {
+                List(self.viewModel.employees, id: \.id) { employee in
+                    VStack(alignment: .leading) {
+                        Text("\(employee.id!). \(employee.employee_name!.uppercased())")
+                            .fontWeight(.bold)
+                        Text("Age: \(employee.employee_age!), Salary:\(employee.employee_salary!)")
+                    }
+                }
+                
+                if self.viewModel.isLoading {
+                    ProgressView()
+                }
+            }
+            .navigationTitle("Employees")
         }
-        .padding()
+        .onAppear {
+            self.viewModel.apiEmployeeList()
+        }
     }
 }
 
